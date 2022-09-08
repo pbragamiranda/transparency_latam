@@ -7,7 +7,7 @@ class CreateReports < ActiveRecord::Migration[7.0]
       t.string :title_pt
       t.integer :year
       t.string :theme
-      t.string :region
+      t.string :region, default: "Latin American"
       t.string :original_link
 
       t.timestamps

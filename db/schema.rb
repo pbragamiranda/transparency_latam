@@ -109,7 +109,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_07_075928) do
     t.string "title_pt"
     t.integer "year"
     t.string "theme"
-    t.string "region"
+    t.string "region", default: "Latin American"
     t.string "original_link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
