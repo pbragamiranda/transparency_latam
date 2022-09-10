@@ -1,0 +1,10 @@
+<h1>Report Author#new</h1>
+
+<div class="container">
+	<%= simple_form_for @report_author do |f| %>
+		<%= f.association :author, collection: @authors %>
+		<%= f.association :report, collection: @reports, label_method: :original_title %>
+
+		<%= f.submit "Assign Author", class: "btn btn-primary" %>
+	<% end %>	
+</div>
