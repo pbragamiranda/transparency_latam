@@ -13,7 +13,7 @@ class ReportsController < ApplicationController
 
   def create
     @report = Report.new(report_params)
-    redirect_to reports_path if @report.save
+    redirect_to new_report_author_path if @report.save
   end
 
   private
