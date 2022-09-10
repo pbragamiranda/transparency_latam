@@ -1,0 +1,9 @@
+<h1>Authors#new</h1>
+
+<div class="container">
+	<%= simple_form_for @author do |f| %>
+		<%= f.input :name %>
+		<%= f.input :category, collection: Author::CATEGORIES %>
+		<%= f.submit %>
+	<% end %>
+</div>

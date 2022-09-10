@@ -3,8 +3,8 @@
 # Table name: authors
 #
 #  id         :bigint           not null, primary key
+#  category   :string
 #  name       :string
-#  type       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
