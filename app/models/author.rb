@@ -9,7 +9,7 @@
 #  updated_at :datetime         not null
 #
 class Author < ApplicationRecord
-	CATEGORIES = ['ONG', 'Public Institution', 'Researcher']
-	validates :name, :category, presence: true
-	validates :category, inclusion: { in: CATEGORIES }
+  CATEGORIES = ['ONG', 'Public Institution', 'Researcher']
+  validates :name, :category, presence: true
+  validates :category, inclusion: { in: CATEGORIES }
 end
