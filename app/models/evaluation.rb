@@ -22,4 +22,8 @@
 #
 class Evaluation < ApplicationRecord
   belongs_to :report
+  LEVEL_GOVERNMENT= ["Municipal / Provincial / District", 
+                     "Country / State / Departmental",
+                     "National / Federal"]
+  validates :level_government, inclusion: { in: LEVEL_GOVERNMENT }
 end
