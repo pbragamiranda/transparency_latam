@@ -2,6 +2,6 @@
 
 <% @evaluations.each do |evaluation| %>
 	<%= evaluation.id %> - <%= evaluation.title_entity %> 
-	<%= link_to "Add active transparency evaluation", "#", class: "btn btn-primary" %>
-	<%= link_to "Add passive transparency evaluation", "#", class: "btn btn-primary" %>
+	<%= link_to "Add active transparency evaluation", new_report_evaluation_active_evaluation_path(@report, evaluation), class: "btn btn-primary" %>
+	<%= link_to "Add passive transparency evaluation", new_report_evaluation_passive_evaluation_path(@report, evaluation), class: "btn btn-primary" %>
 <% end %>

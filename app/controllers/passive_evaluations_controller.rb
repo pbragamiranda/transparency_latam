@@ -1,0 +1,2 @@
+class PassiveEvaluationsController < ApplicationController
+end
