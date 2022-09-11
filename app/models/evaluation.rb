@@ -21,10 +21,10 @@
 #  fk_rails_...  (report_id => reports.id)
 #
 class Evaluation < ApplicationRecord
-  LEVEL_GOVERNMENT= ["Municipal / Provincial / District", 
-                     "Country / State / Departmental",
-                     "National / Federal"]
-                     
+  LEVEL_GOVERNMENT = ["Municipal / Provincial / District",
+                      "Country / State / Departmental",
+                      "National / Federal"]
+
   belongs_to :report
   has_one :active_evaluation
   has_one :passive_evaluation

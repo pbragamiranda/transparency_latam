@@ -1,0 +1,10 @@
+<h1>Evaluation Branch#new</h1>
+
+<div class="container">
+	<%= simple_form_for @evaluation_branch do |f| %>
+		<%= f.association :evaluation, collection: @evaluations, label_method: :title_entity %>
+		<%= f.association :branch, collection: @branchs, label_method: :name_en %>
+
+		<%= f.submit "Assign Author", class: "btn btn-primary" %>
+	<% end %>	
+</div>
