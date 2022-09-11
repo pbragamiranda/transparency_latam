@@ -1,0 +1,20 @@
+<h1>PassiveEvaluation#new</h1>
+
+<div class="container">
+	<%= simple_form_for [@report, @evaluation, @passive_evaluation] do |f| %>
+		<%= f.input :number_evaluated_entities %>
+		<%= f.input :number_responses %>
+		<%= f.input :number_requests %>
+		<%= f.input :number_responses_on_time %>
+		<%= f.input :number_partial_responses %>
+		<%= f.input :denials %>
+		<%= f.input :denials_mute %>
+		<%= f.input :appeals %>
+		<%= f.input :n_inst_pt %>
+		<%= f.input :declared_response_rate %>
+		<%= f.input :calculated_response_rate %>
+		<%= f.input :number_time_extension_requests %>
+
+		<%= f.submit "Create Passive Evaluation", class: "btn btn-primary" %>
+	<% end %>	
+</div>
