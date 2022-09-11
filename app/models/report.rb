@@ -15,7 +15,7 @@
 #  updated_at     :datetime         not null
 #
 class Report < ApplicationRecord
-	has_many :report_authors
+  has_many :report_authors
   has_many :authors, through: :report_authors
-  has_many :evaluations 
+  has_many :evaluations
 end
