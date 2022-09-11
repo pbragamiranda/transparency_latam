@@ -6,7 +6,8 @@ class CreatePassiveEvaluations < ActiveRecord::Migration[7.0]
       t.integer :number_responses
       t.integer :number_requests
       t.integer :number_responses_on_time
-      t.integer :denial
+      t.integer :number_partial_responses
+      t.integer :denials
       t.integer :denials_mute
       t.integer :appeals
       t.integer :n_inst_pt

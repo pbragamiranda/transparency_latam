@@ -4,6 +4,8 @@ Author.destroy_all
 
 puts "Populating database..."
 
+User.create(email: "pedro@pedro.com", password: "password")
+
 authors_and_categories = {
 	"Centro de Investigación y Docencia Económicas (CIDE)" => "Public Institution",
 	"Asociación por los Derechos Civiles (ADC)" => "NGO",

@@ -6,10 +6,11 @@
 #  appeals                        :integer
 #  calculated_response_rate       :decimal(, )
 #  declared_response_rate         :decimal(, )
-#  denial                         :integer
+#  denials                        :integer
 #  denials_mute                   :integer
 #  n_inst_pt                      :integer
 #  number_evaluated_entities      :integer
+#  number_partial_responses       :integer
 #  number_requests                :integer
 #  number_responses               :integer
 #  number_responses_on_time       :integer

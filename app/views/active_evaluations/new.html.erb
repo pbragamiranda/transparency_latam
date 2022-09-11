@@ -1,0 +1,11 @@
+<h1>ActiveEvaluation#new</h1>
+
+<div class="container">
+	<%= simple_form_for [@report, @evaluation, @active_evaluation] do |f| %>
+		<%= f.input :number_institutions %>
+		<%= f.input :declared_compliance %>
+		<%= f.input :calculated_complicance %>
+
+		<%= f.submit "Create Active Evaluation", class: "btn btn-primary" %>
+	<% end %>	
+</div>

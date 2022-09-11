@@ -21,9 +21,12 @@
 #  fk_rails_...  (report_id => reports.id)
 #
 class Evaluation < ApplicationRecord
-  belongs_to :report
   LEVEL_GOVERNMENT= ["Municipal / Provincial / District", 
                      "Country / State / Departmental",
                      "National / Federal"]
+                     
+  belongs_to :report
+  has_one :active_evaluation
+  has_one :passive_evaluation
   validates :level_government, inclusion: { in: LEVEL_GOVERNMENT }
 end
