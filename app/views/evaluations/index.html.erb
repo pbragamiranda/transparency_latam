@@ -8,12 +8,16 @@
 			<%= link_to "Add passive transparency evaluation", new_report_evaluation_passive_evaluation_path(@report, evaluation), class: "btn btn-primary" %>
 		</div>
 		<div>
-			Active Evaluation
-			<%= evaluation.active_evaluation %>
+			<% if evaluation.active_evaluation %>
+				Active Evaluation number 
+				<%= evaluation.active_evaluation.id %> created
+			<% end -%>
 		</div>
 		<div>
-			Passive Evaluation
-			<%= evaluation.passive_evaluation %>
+			<% if evaluation.passive_evaluation %>
+				Passive Evaluation number
+				<%= evaluation.passive_evaluation.id %> created
+			<% end %>
 		</div>
 	<% end %>
 </div>
