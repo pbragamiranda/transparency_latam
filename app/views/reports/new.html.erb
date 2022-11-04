@@ -1,13 +1,13 @@
-<h1>Reports#new</h1>
+<h1>Create new report</h1>
 
 <div class="container">
 	<%= simple_form_for @report do |f| %>
-		<%= f.input :original_title %>
-		<%= f.input :title_en %>
-		<%= f.input :title_es %>
-		<%= f.input :title_pt %>
+		<%= f.input :original_title, label: "Original Title" %>
+		<%= f.input :title_pt, label: "Title in Portuguese" %>
+		<%= f.input :title_en, label: "Title in English" %>
+		<%= f.input :title_es, label: "Title in Spanish" %>
 		<%= f.input :year %>
-		<%= f.input :theme %>
+		<%= f.input :theme, label: "Policy Area" %>
 		<%= f.input :original_link %>
 
 		<%= f.submit "Create Report", class: "btn btn-primary" %>

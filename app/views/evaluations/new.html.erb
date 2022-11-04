@@ -1,11 +1,11 @@
-<h1>Evaluation#new</h1>
+<h1>Create new evaluation</h1>
 
 <div class="container">
 	<%= simple_form_for [@report, @evaluation] do |f| %>
 		<%= f.input :year %>
-		<%= f.input :level_government, collection: Evaluation::LEVEL_GOVERNMENT %>
+		<%= f.input :level_government, collection: Evaluation::LEVEL_GOVERNMENT, label: "Level of Government" %>
 		<%= f.input :jurisdiction %>
-		<%= f.input :title_entity %>
+		<%= f.input :title_entity, label: "Entity Title" %>
 
 		<%= f.submit "Create Evaluation", class: "btn btn-primary" %>
 	<% end %>	

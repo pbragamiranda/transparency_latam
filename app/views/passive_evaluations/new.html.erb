@@ -1,19 +1,19 @@
-<h1>PassiveEvaluation#new</h1>
+<h1>Create new passive evaluation</h1>
 
 <div class="container">
 	<%= simple_form_for [@report, @evaluation, @passive_evaluation] do |f| %>
-		<%= f.input :number_evaluated_entities %>
-		<%= f.input :number_responses %>
-		<%= f.input :number_requests %>
-		<%= f.input :number_responses_on_time %>
-		<%= f.input :number_partial_responses %>
-		<%= f.input :denials %>
-		<%= f.input :denials_mute %>
-		<%= f.input :appeals %>
-		<%= f.input :n_inst_pt %>
-		<%= f.input :declared_response_rate %>
-		<%= f.input :calculated_response_rate %>
-		<%= f.input :number_time_extension_requests %>
+		<%= f.input :number_evaluated_entities, label: "Number of Evaluated Entities" %>
+		<%= f.input :number_responses, label: "Number of Responses" %>
+		<%= f.input :number_requests, label: "Number of Requests" %>
+		<%= f.input :number_responses_on_time, label: "Number of Responses on Time" %>
+		<%= f.input :number_partial_responses, label: "Number of Partial Responses" %>
+		<%= f.input :denials, label: "Number of Denials" %>
+		<%= f.input :denials_mute, label: "Number of Denials Mute" %>
+		<%= f.input :appeals, label: "Number of Appeals" %>
+		<%= f.input :n_inst_pt, label: "Number of Institutions Evaluated for Passive Transparency" %>
+		<%= f.input :declared_response_rate, label: "Declared Response Rate" %>
+		<%= f.input :calculated_response_rate, label: "Calculated Response Rate" %>
+		<%= f.input :number_time_extension_requests, label: "Number of Responses After Time Extension" %>
 
 		<%= f.submit "Create Passive Evaluation", class: "btn btn-primary" %>
 	<% end %>	
