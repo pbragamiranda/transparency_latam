@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Blazer::Engine, at: "blazer"
   devise_for :users
   root to: "pages#home"
   resources :authors, only: [ :new, :create ]
