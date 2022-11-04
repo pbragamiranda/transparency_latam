@@ -51,6 +51,9 @@ gem "sassc-rails"
 gem 'rubocop', require: false
 gem 'rubocop-rails', require: false
 
+# Graphs and Dashboards
+gem "blazer"
+
 gem "devise"
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
