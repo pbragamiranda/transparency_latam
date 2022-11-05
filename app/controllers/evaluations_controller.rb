@@ -7,7 +7,6 @@ class EvaluationsController < ApplicationController
 
   def new
     @evaluation = Evaluation.new
-    @evaluation.evaluation_countries.build
   end
 
   def create
@@ -28,6 +27,6 @@ class EvaluationsController < ApplicationController
 
   def evaluation_params
     params.require(:evaluation).permit(:year, :level_government, :jurisdiction,
-                                       :title_entity, country_ids: [])
+                                       :title_entity, :country_ids, :branch_ids)
   end
 end

@@ -29,7 +29,10 @@ class Evaluation < ApplicationRecord
   has_one :passive_evaluation
   has_many :evaluation_countries
   has_many :countries, through: :evaluation_countries
+  has_many :evaluation_branches
+  has_many :branches, through: :evaluation_branches
 
+  accepts_nested_attributes_for :branches
   accepts_nested_attributes_for :countries
 
   validates :level_government, inclusion: { in: LEVEL_GOVERNMENT }
