@@ -10,4 +10,6 @@
 #  updated_at :datetime         not null
 #
 class Branch < ApplicationRecord
+	has_many :evaluation_branches
+	has_many :evaluations, through: :evaluation_branches
 end

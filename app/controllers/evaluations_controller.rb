@@ -12,7 +12,11 @@ class EvaluationsController < ApplicationController
   def create
     @evaluation = Evaluation.new(evaluation_params)
     @evaluation.report = @report
-    redirect_to reports_path if @evaluation.save
+    if @evaluation.save
+      redirect_to reports_path 
+    else
+      render :new
+    end
   end
 
   private
@@ -23,6 +27,6 @@ class EvaluationsController < ApplicationController
 
   def evaluation_params
     params.require(:evaluation).permit(:year, :level_government, :jurisdiction,
-                                       :title_entity, :evaluation_type)
+                                       :title_entity, :country_ids, :branch_ids)
   end
 end

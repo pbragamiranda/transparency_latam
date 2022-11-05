@@ -3,7 +3,6 @@
 # Table name: evaluations
 #
 #  id               :bigint           not null, primary key
-#  evaluation_type  :string
 #  jurisdiction     :string
 #  level_government :string
 #  title_entity     :string
@@ -28,5 +27,13 @@ class Evaluation < ApplicationRecord
   belongs_to :report
   has_one :active_evaluation
   has_one :passive_evaluation
+  has_many :evaluation_countries
+  has_many :countries, through: :evaluation_countries
+  has_many :evaluation_branches
+  has_many :branches, through: :evaluation_branches
+
+  accepts_nested_attributes_for :branches
+  accepts_nested_attributes_for :countries
+
   validates :level_government, inclusion: { in: LEVEL_GOVERNMENT }
 end

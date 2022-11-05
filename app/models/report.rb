@@ -15,7 +15,9 @@
 #  updated_at     :datetime         not null
 #
 class Report < ApplicationRecord
+  has_many :evaluations
   has_many :report_authors
   has_many :authors, through: :report_authors
-  has_many :evaluations
+
+  accepts_nested_attributes_for :authors
 end
