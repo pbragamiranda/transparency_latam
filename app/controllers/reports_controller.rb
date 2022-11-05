@@ -14,7 +14,7 @@ class ReportsController < ApplicationController
   def create
     @report = Report.new(report_params)
     if @report.save
-      redirect_to new_report_author_path 
+      redirect_to reports_path 
     else
       raise
       render :new

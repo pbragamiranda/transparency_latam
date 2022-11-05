@@ -1,23 +1,34 @@
-<h1>Evaluations of <%= @report.original_title %></h1>
+<h1> Report - <%= @report.original_title %></h1>
 
-<div class="container">
-	<% @evaluations.each do |evaluation| %>
-		<div class="mb-1">
-			<%= evaluation.id %> - <%= evaluation.title_entity %> 
-			<%= link_to "Add active transparency evaluation", new_report_evaluation_active_evaluation_path(@report, evaluation), class: "btn btn-primary" %>
-			<%= link_to "Add passive transparency evaluation", new_report_evaluation_passive_evaluation_path(@report, evaluation), class: "btn btn-primary" %>
-		</div>
-		<div>
-			<% if evaluation.active_evaluation %>
-				Active Evaluation number 
-				<%= evaluation.active_evaluation.id %> created
-			<% end -%>
-		</div>
-		<div>
-			<% if evaluation.passive_evaluation %>
-				Passive Evaluation number
-				<%= evaluation.passive_evaluation.id %> created
-			<% end %>
-		</div>
-	<% end %>
+
+
+<div class="container mt-5">
+	<% @report.evaluations.each do |evaluation| %>
+	  <div class="row">
+	  	<h3>Evaluation - <%= evaluation.id %></h3>	
+	    <div class="col-6">
+	    	<h5>Active Transparecy Evaluation</h5>
+	  		<div class="d-flex flex-column">
+	    		<% if evaluation.active_evaluation %>
+	    			Active Evaluation number 
+	    		<%= evaluation.active_evaluation.id %> created
+	    		<% else %>
+						<%= link_to "Add active transparency evaluation", new_report_evaluation_active_evaluation_path(@report, evaluation), class: "btn btn-primary" %>
+	    		<% end -%>
+	  	 	</div>
+	    </div>
+
+	    <div class="col-6">
+	    	<h5>Passive Transparecy Evaluation</h5>
+	    	<div class="d-flex flex-column">
+		  		<% if evaluation.passive_evaluation %>
+		  			Passive Evaluation number
+		  			<%= evaluation.passive_evaluation.id %> created
+		  		<% else %>
+		  			<%= link_to "Add passive transparency evaluation", new_report_evaluation_passive_evaluation_path(@report, evaluation), class: "btn btn-primary" %>
+		  		<% end %>
+	    	</div>
+	    </div>
+	  </div>
+  <% end %>
 </div>

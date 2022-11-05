@@ -1,8 +1,14 @@
 <h1>All Reports</h1>
 
-<% @reports.each_with_index do |report, index| %>
-	<div class="m-2">
-		<%= index + 1 %> - <%= report.original_title %> <%= link_to "add new evaluation", new_report_evaluation_path(report), class: "btn btn-primary" %>
-		<%= link_to "List all evaluations", report_evaluations_path(report), class: "btn btn-primary" %>
+<% @reports.each do |report| %>
+	<div class="card">
+	  <div class="card-body">
+	    <h5 class="card-title"><%= report.original_title %> - <%= report.year %></h5>
+	    <p class="card-text">by <%= report.authors&.last&.name %></p>
+	    <%= link_to "add new evaluation", new_report_evaluation_path(report), class: "btn btn-primary" %>
+	    <%= link_to "List all evaluations", report_evaluations_path(report), class: "btn btn-primary" %>
+	  </div>
 	</div>
 <% end %>
+
+
