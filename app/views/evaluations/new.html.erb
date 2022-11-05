@@ -6,6 +6,7 @@
 		<%= f.input :level_government, collection: Evaluation::LEVEL_GOVERNMENT, label: "Level of Government" %>
 		<%= f.input :jurisdiction %>
 		<%= f.input :title_entity, label: "Entity Title" %>
+		<%= f.collection_select :country_ids, Country.all, :id, :name, label: "Entity Title" %>
 
 		<%= f.submit "Create Evaluation", class: "btn btn-primary" %>
 	<% end %>	

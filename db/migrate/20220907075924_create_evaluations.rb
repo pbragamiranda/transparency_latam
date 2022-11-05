@@ -6,8 +6,7 @@ class CreateEvaluations < ActiveRecord::Migration[7.0]
       t.string :level_government
       t.string :jurisdiction
       t.string :title_entity
-      t.string :evaluation_type
-
+      
       t.timestamps
     end
   end

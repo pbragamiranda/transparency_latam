@@ -8,4 +8,6 @@
 #  updated_at :datetime         not null
 #
 class Country < ApplicationRecord
+	has_many :evaluation_countries
+	has_many :evaluations, through: :evaluation_countries
 end

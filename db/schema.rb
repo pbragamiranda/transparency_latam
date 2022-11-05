@@ -125,7 +125,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_13_154547) do
     t.string "level_government"
     t.string "jurisdiction"
     t.string "title_entity"
-    t.string "evaluation_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["report_id"], name: "index_evaluations_on_report_id"

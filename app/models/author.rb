@@ -10,6 +10,10 @@
 #
 class Author < ApplicationRecord
   CATEGORIES = ['NGO', 'Public Institution', 'Researcher']
+
+  has_many :report_authors
+  has_many :reports, through: :report_authors
+
   validates :name, :category, presence: true
   validates :category, inclusion: { in: CATEGORIES }
 end

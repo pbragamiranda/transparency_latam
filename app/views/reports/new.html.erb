@@ -9,6 +9,12 @@
 		<%= f.input :year %>
 		<%= f.input :theme, label: "Policy Area" %>
 		<%= f.input :original_link %>
+		
+		<%= f.fields_for :authors, @report.authors.build do |authors_fields| %>
+		  <%= authors_fields.input :name, label: "Author Name" %>
+		  <%= authors_fields.input :category, label: "Author Category", collection: Author::CATEGORIES %>
+		<% end %>
+
 
 		<%= f.submit "Create Report", class: "btn btn-primary" %>
 	<% end %>	

@@ -3,7 +3,6 @@
 # Table name: evaluations
 #
 #  id               :bigint           not null, primary key
-#  evaluation_type  :string
 #  jurisdiction     :string
 #  level_government :string
 #  title_entity     :string
