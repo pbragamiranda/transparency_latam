@@ -57,6 +57,9 @@ gem "blazer"
 # Admin 
 gem "rails_admin", "~> 3.0"
 
+# Hosting
+gem "cloudinary"
+
 gem "devise"
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"

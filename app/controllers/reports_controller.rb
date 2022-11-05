@@ -25,7 +25,7 @@ class ReportsController < ApplicationController
 
   def report_params
     params.require(:report).permit(:original_title, :title_en, :title_es, :title_pt,
-                                   :original_link, :theme, :year, 
+                                   :original_link, :theme, :year, :file, 
                                    authors_attributes: [:name, :category])
   end
 end
