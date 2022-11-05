@@ -20,4 +20,6 @@ class Report < ApplicationRecord
   has_many :authors, through: :report_authors
 
   accepts_nested_attributes_for :authors
+
+  has_one_attached :file
 end

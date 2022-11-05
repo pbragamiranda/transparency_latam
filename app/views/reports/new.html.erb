@@ -9,6 +9,7 @@
 		<%= f.input :year %>
 		<%= f.input :theme, label: "Policy Area" %>
 		<%= f.input :original_link %>
+		<%= f.input :file, as: :file %>
 		
 		<%= f.fields_for :authors, @report.authors.build do |authors_fields| %>
 		  <%= authors_fields.input :name, label: "Author Name" %>
