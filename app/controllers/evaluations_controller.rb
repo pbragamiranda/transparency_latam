@@ -13,7 +13,7 @@ class EvaluationsController < ApplicationController
     @evaluation = Evaluation.new(evaluation_params)
     @evaluation.report = @report
     if @evaluation.save
-      redirect_to reports_path 
+      redirect_to reports_path
     else
       render :new
     end

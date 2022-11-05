@@ -54,7 +54,7 @@ gem 'rubocop-rails', require: false
 # Graphs and Dashboards
 gem "blazer"
 
-# Admin 
+# Admin
 gem "rails_admin", "~> 3.0"
 
 # Hosting
