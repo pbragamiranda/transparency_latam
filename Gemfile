@@ -54,6 +54,9 @@ gem 'rubocop-rails', require: false
 # Graphs and Dashboards
 gem "blazer"
 
+# Admin 
+gem "rails_admin", "~> 3.0"
+
 gem "devise"
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
@@ -83,3 +86,4 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+gem "sassc-rails"
