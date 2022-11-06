@@ -7,7 +7,7 @@
 	    <p class="card-text">by <%= report.authors&.last&.name %></p>
 	    <% if report.file.key %>
 	    	<p class="card-text">
-	    		<%= link_to "Download", "http://res.cloudinary.com/dedjzp7v9/image/upload/fl_attachment:#{report.original_title.gsub(" ","_")}/v1/development/#{report.file.key}" %>
+	    		<%= link_to "Download", "http://res.cloudinary.com/dedjzp7v9/image/upload/fl_attachment:#{report.original_title.gsub(" ","_")}/v1/production/#{report.file.key}" %>
 	    	</p>
 	    <% end %>
 	    <%= link_to "add new evaluation", new_report_evaluation_path(report), class: "btn btn-primary" %>
