@@ -9,7 +9,7 @@
 #  updated_at :datetime         not null
 #
 class Author < ApplicationRecord
-  CATEGORIES = ['NGO', 'Public Institution', 'Researcher']
+  CATEGORIES = ['NGO', 'Government Agency', 'Academic', 'Media']
 
   has_many :report_authors
   has_many :reports, through: :report_authors
