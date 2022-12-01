@@ -8,7 +8,7 @@
 		<%= f.input :title_es, label: "Title in Spanish" %>
 		<%= f.input :year %>
 		<%= f.input :theme, label: "Policy Area" %>
-		<%= f.input :original_link %>
+		<%= f.input :original_link, label: "Report Link" %>
 		<%= f.input :file, as: :file %>
 		
 		<%= f.fields_for :authors, @report.authors.build do |authors_fields| %>

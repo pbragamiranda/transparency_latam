@@ -20,8 +20,8 @@
 #  fk_rails_...  (report_id => reports.id)
 #
 class Evaluation < ApplicationRecord
-  LEVEL_GOVERNMENT = ["Municipal / Provincial / District",
-                      "Country / State / Departmental",
+  LEVEL_GOVERNMENT = ["Municipal / Local ",
+                      "State / Provincial / Regional",
                       "National / Federal"]
 
   belongs_to :report

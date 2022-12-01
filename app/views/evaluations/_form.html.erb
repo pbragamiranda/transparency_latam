@@ -1,0 +1,10 @@
+	<%= simple_form_for [report, evaluation] do |f| %>
+		<%= f.input :year %>
+		<%= f.input :level_government, collection: Evaluation::LEVEL_GOVERNMENT, label: "Level of Government" %>
+		<%= f.input :jurisdiction, label: "Name of Jurisdiction" %>
+		<%= f.input :title_entity, label: "Name of Institutions Evaluated" %>
+		<%= f.collection_select :country_ids, Country.all, :id, :name, label: "Country" %>
+		<%= f.collection_select :branch_ids, Branch.all, :id, :name_en, label: "Branch" %>
+
+		<%= f.submit "Create Evaluation", class: "btn btn-primary" %>
+	<% end %>	
